@@ -1,0 +1,22 @@
+# Backend
+backend/.env
+backend/bin/
+backend/obj/
+
+# Unity
+unity/Library/
+unity/Temp/
+unity/Logs/
+unity/Obj/
+unity/UserSettings/
+unity/Build/
+unity/Builds/
+unity/MemoryCaptures/
+unity/.vs/
+
+# Editor / OS
+.vscode/
+.idea/
+*.csproj.user
+*.suo
+Thumbs.db
