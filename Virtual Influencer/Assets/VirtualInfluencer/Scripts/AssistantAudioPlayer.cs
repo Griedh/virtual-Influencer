@@ -19,12 +19,12 @@ namespace VirtualInfluencer
 
             if (webSocketClient == null)
             {
-                webSocketClient = FindFirstObjectByType<VoiceWebSocketClient>();
+                webSocketClient = FindAnyObjectByType<VoiceWebSocketClient>();
             }
 
             if (lipSyncController == null)
             {
-                lipSyncController = FindFirstObjectByType<AvatarLipSyncController>();
+                lipSyncController = FindAnyObjectByType<AvatarLipSyncController>();
             }
 
             if (webSocketClient != null)

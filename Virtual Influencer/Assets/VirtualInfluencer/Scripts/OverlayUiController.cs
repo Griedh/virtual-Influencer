@@ -22,7 +22,7 @@ namespace VirtualInfluencer
         {
             if (webSocketClient == null)
             {
-                webSocketClient = FindFirstObjectByType<VoiceWebSocketClient>();
+                webSocketClient = FindAnyObjectByType<VoiceWebSocketClient>();
             }
 
             if (webSocketClient != null)

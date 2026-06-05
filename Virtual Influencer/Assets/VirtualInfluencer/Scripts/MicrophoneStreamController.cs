@@ -39,7 +39,7 @@ namespace VirtualInfluencer
         {
             if (webSocketClient == null)
             {
-                webSocketClient = FindFirstObjectByType<VoiceWebSocketClient>();
+                webSocketClient = FindAnyObjectByType<VoiceWebSocketClient>();
             }
 
             _vadEnabled = useVadByDefault;
