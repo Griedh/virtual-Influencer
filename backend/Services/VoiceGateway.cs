@@ -96,13 +96,13 @@ public sealed class VoiceGateway
                 return;
             }
 
-            switch (clientEvent.Value.Type)
+            switch (clientEvent.Type)
             {
                 case "mode.set":
                     await SendEventAsync(clientSocket, VoiceEventFactory.StateChanged("Idle", "modular"), cancellationToken);
                     break;
                 case "vad.toggle":
-                    context.VadEnabled = TryReadBool(clientEvent.Value.Raw, "enabled");
+                    context.VadEnabled = TryReadBool(clientEvent.Raw, "enabled");
                     await SendEventAsync(
                         clientSocket,
                         VoiceEventFactory.StateChanged("Idle", "modular", $"VAD={(context.VadEnabled ? "on" : "off")}"),
@@ -113,7 +113,7 @@ public sealed class VoiceGateway
                     await SendEventAsync(clientSocket, VoiceEventFactory.StateChanged("Listening", "modular"), cancellationToken);
                     break;
                 case "audio.chunk":
-                    var chunkBase64 = TryReadString(clientEvent.Value.Raw, "audioBase64");
+                    var chunkBase64 = TryReadString(clientEvent.Raw, "audioBase64");
                     if (string.IsNullOrWhiteSpace(chunkBase64))
                     {
                         break;
@@ -136,7 +136,7 @@ public sealed class VoiceGateway
                     await SendEventAsync(clientSocket, VoiceEventFactory.StateChanged("Idle", "modular", "Conversation reset"), cancellationToken);
                     break;
                 default:
-                    await SendEventAsync(clientSocket, VoiceEventFactory.Error($"Unbekannter Event-Typ: {clientEvent.Value.Type}", "unknown_event"), cancellationToken);
+                    await SendEventAsync(clientSocket, VoiceEventFactory.Error($"Unbekannter Event-Typ: {clientEvent.Type}", "unknown_event"), cancellationToken);
                     break;
             }
         }
@@ -179,12 +179,12 @@ public sealed class VoiceGateway
                 return;
             }
 
-            switch (clientEvent.Value.Type)
+            switch (clientEvent.Type)
             {
                 case "mode.set":
                     break;
                 case "vad.toggle":
-                    var enabled = TryReadBool(clientEvent.Value.Raw, "enabled");
+                    var enabled = TryReadBool(clientEvent.Raw, "enabled");
                     manualTurnControl = !enabled;
                     if (enabled)
                     {
@@ -218,7 +218,7 @@ public sealed class VoiceGateway
 
                     break;
                 case "audio.chunk":
-                    var audioChunkBase64 = TryReadString(clientEvent.Value.Raw, "audioBase64");
+                    var audioChunkBase64 = TryReadString(clientEvent.Raw, "audioBase64");
                     if (!string.IsNullOrWhiteSpace(audioChunkBase64))
                     {
                         await SendJsonToSocketAsync(realtimeSocket, new
@@ -259,7 +259,7 @@ public sealed class VoiceGateway
                     await SendEventAsync(clientSocket, VoiceEventFactory.StateChanged("Idle", "realtime", "Conversation reset"), cancellationToken);
                     break;
                 default:
-                    await SendEventAsync(clientSocket, VoiceEventFactory.Error($"Unbekannter Event-Typ: {clientEvent.Value.Type}", "unknown_event"), cancellationToken);
+                    await SendEventAsync(clientSocket, VoiceEventFactory.Error($"Unbekannter Event-Typ: {clientEvent.Type}", "unknown_event"), cancellationToken);
                     break;
             }
         }
