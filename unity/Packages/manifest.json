@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "com.unity.textmeshpro": "3.0.9",
-    "com.unity.inputsystem": "1.11.2",
-    "com.hecomi.ulipsync": "https://github.com/hecomi/uLipSync.git?path=/Assets/uLipSync"
-  }
-}

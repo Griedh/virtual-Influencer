@@ -2,9 +2,9 @@
 
 ## 1. Projektbasis
 
-1. Unity Hub -> neues 3D (URP oder Built-in) Projekt in `unity/` erstellen oder vorhandenes Projekt auf diesen Ordner zeigen.
-2. `unity/Packages/manifest.json` nutzen (enthaelt uLipSync-Dependency).
-3. `unity/Assets/VirtualInfluencer/Scripts` als Source-Ordner importieren.
+1. Unity Hub -> Projekt `Virtual Influencer/` oeffnen.
+2. `Virtual Influencer/Packages/manifest.json` nutzen (enthaelt uLipSync-Dependency).
+3. `Virtual Influencer/Assets/VirtualInfluencer/Scripts` als Source-Ordner verwenden.
 
 ## 2. Hierarchie-Empfehlung
 

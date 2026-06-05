@@ -26,7 +26,7 @@ Dieses Repo enthaelt ein lauffaehiges MVP-Scaffold fuer ein Unity-Team-Maskottch
 ## Repo-Struktur
 
 - `backend/` -> .NET 8 Minimal API (HTTP + WebSocket Proxy)
-- `unity/` -> Unity-Scripts + Package-Manifest fuer Client
+- `Virtual Influencer/` -> Unity-Projekt mit Assets, Packages und ProjectSettings
 - `docs/` -> Setup- und Runbook-Dokumentation
 
 ## Installations-Tools (Pflicht)
@@ -68,9 +68,9 @@ Verfuegbare Endpunkte:
 
 ## Unity Setup
 
-1. Unity-Projekt in `unity/` erstellen oder bestehendes dort verwenden.
-2. `unity/Packages/manifest.json` verwenden (enthaelt `uLipSync`).
-3. Scripts aus `unity/Assets/VirtualInfluencer/Scripts` in der Scene verdrahten.
+1. Unity-Projekt in `Virtual Influencer/` oeffnen.
+2. `Virtual Influencer/Packages/manifest.json` enthaelt `uLipSync` und TextMesh Pro.
+3. Scripts aus `Virtual Influencer/Assets/VirtualInfluencer/Scripts` in der Scene verdrahten.
 4. Wichtige Referenz:
    - `VoiceWebSocketClient.backendHttpBaseUrl = http://127.0.0.1:5050`
 

@@ -3,20 +3,58 @@ backend/.env
 backend/bin/
 backend/obj/
 
-# Unity
-unity/Library/
-unity/Temp/
-unity/Logs/
-unity/Obj/
-unity/UserSettings/
-unity/Build/
-unity/Builds/
-unity/MemoryCaptures/
-unity/.vs/
+# Unity generated folders
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emory[Cc]aptures/
+**/[Bb]uild/
+**/[Bb]uilds/
+
+# Unity generated project files
+Virtual Influencer/*.csproj
+Virtual Influencer/*.sln
+Virtual Influencer/*.suo
+
+# Unity Learn starter template assets not used by this MVP
+Virtual Influencer/Assets/Audio/
+Virtual Influencer/Assets/Audio.meta
+Virtual Influencer/Assets/Materials/
+Virtual Influencer/Assets/Materials.meta
+Virtual Influencer/Assets/Prefabs/
+Virtual Influencer/Assets/Prefabs.meta
+Virtual Influencer/Assets/Scenes.meta
+Virtual Influencer/Assets/Scenes/GetStarted_Scene.unity
+Virtual Influencer/Assets/Scenes/GetStarted_Scene.unity.meta
+Virtual Influencer/Assets/Skyboxes/
+Virtual Influencer/Assets/Skyboxes.meta
+Virtual Influencer/Assets/SourceFiles/
+Virtual Influencer/Assets/SourceFiles.meta
+Virtual Influencer/Assets/Tutorials/
+Virtual Influencer/Assets/Tutorials.meta
+Virtual Influencer/Assets/UI/
+Virtual Influencer/Assets/UI.meta
+Virtual Influencer/Assets/VFX/
+Virtual Influencer/Assets/VFX.meta
+
+# Unity / Rider / Visual Studio caches
+**/.vs/
+**/.idea/
+**/.gradle/
+*.csproj.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
 
 # Editor / OS
 .vscode/
 .idea/
-*.csproj.user
 *.suo
 Thumbs.db
+Desktop.ini
